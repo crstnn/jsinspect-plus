@@ -1,7 +1,21 @@
 {
   "branches": ["master"],
   "plugins": [
-    "@semantic-release/commit-analyzer",
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "conventionalcommits",
+        "releaseRules": [
+          { "type": "feat", "scope": null, "breaking": false, "release": "minor" },
+          { "type": "feat", "scope": null, "breaking": true, "release": "major" }
+        ],
+        "parserOpts": {
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"],
+          "headerPattern": "^(\\w*)(\\((.*)\\))?!?: (.*)$",
+          "breakingHeaderPattern": "^(\\w*)(\\((.*)\\))?!: (.*)$"
+        }
+      }
+    ],
     "@semantic-release/release-notes-generator",
     "@semantic-release/npm",
     "@semantic-release/github",
