@@ -37,7 +37,8 @@
     "concat-stream": "^2.0.0",
     "dirmap": "^0.0.2",
     "expect.js": "^0.3.1",
-    "mocha": "^10.3.0"
+    "mocha": "^10.3.0",
+    "semantic-release": "^20.0.0"
   },
   "bin": {
     "jsinspect": "bin/jsinspect"
