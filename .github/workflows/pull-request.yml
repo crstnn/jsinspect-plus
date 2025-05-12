@@ -4,22 +4,17 @@ on:
   pull_request_target:
     branches:
       - master
-
 jobs:
   validate-pull-request:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-
       - name: Install dependencies
         run: npm ci
-
       - name: Run tests
         run: npm test
