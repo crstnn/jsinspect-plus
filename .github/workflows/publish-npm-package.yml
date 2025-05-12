@@ -1,4 +1,9 @@
 name: Publish package to npm
+permissions: # https://github.com/semantic-release/npm/blob/master/README.md#npm-registry-authentication
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
 on:
   push:
     branches:
