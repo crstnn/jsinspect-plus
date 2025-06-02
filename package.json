@@ -25,7 +25,7 @@
     "url": "git+https://github.com/crstnn/jsinspect-plus.git"
   },
   "dependencies": {
-    "@babel/parser": "^8.0.0-alpha.7",
+    "@babel/parser": "^8.0.0-beta.0",
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "filepaths": "^0.3.0",
