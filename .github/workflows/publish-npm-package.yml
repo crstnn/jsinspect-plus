@@ -22,7 +22,7 @@ jobs:
       - name: Install semantic-release and plugins
         run: npm install --no-save
           conventional-changelog-conventionalcommits@^8.0.0
-          semantic-release@^24.2.3
+          semantic-release@^25.0.9
           @semantic-release/commit-analyzer@^13.0.1
           @semantic-release/release-notes-generator@^14.0.3
           @semantic-release/npm@^13.2.0
