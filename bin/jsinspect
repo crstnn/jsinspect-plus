@@ -73,7 +73,7 @@ if (program.ignore) {
   ignorePatterns.push(program.ignore);
 }
 
-const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+const extensions = ['.js', '.jsx', '.mjs', '.cjs', '.ts', '.tsx', '.mts', '.cts'];
 try {
   paths = filepaths.getSync(suppliedPaths, {
     ext: extensions,
