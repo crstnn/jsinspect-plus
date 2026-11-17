@@ -3,6 +3,9 @@ const fixtures    = require('../fixtures');
 const helpers     = require('../helpers');
 const PMDReporter = require('../../lib/reporters/pmd');
 const Inspector   = require('../../lib/inspector');
+const path        = require('path');
+
+const smallLinesPath = path.join('spec', 'fixtures', 'smallLines.js');
 
 describe('PMDReporter', function() {
   afterEach(function() {
@@ -41,13 +44,13 @@ describe('PMDReporter', function() {
         <file path="${fixtures.smallLines}" line="2"/>
         <file path="${fixtures.smallLines}" line="3"/>
         <codefragment>
-        spec/fixtures/smallLines.js:1,1
+        ${smallLinesPath}:1,1
         test = function() { return 1; };
 
-        spec/fixtures/smallLines.js:2,2
+        ${smallLinesPath}:2,2
         test = function() { return 2; };
 
-        spec/fixtures/smallLines.js:3,3
+        ${smallLinesPath}:3,3
         test = function() { return 3; };
         </codefragment>
         </duplication>

@@ -4,6 +4,9 @@ const fixtures     = require('../fixtures');
 const helpers      = require('../helpers');
 const JSONReporter = require('../../lib/reporters/json');
 const Inspector    = require('../../lib/inspector');
+const path         = require('path');
+
+const smallLinesPath = path.join('spec', 'fixtures', 'smallLines.js');
 
 describe('JSONReporter', function() {
   afterEach(function() {
@@ -54,17 +57,17 @@ describe('JSONReporter', function() {
         id: '8ee1b37f99571a8917be385c2924f659762c1349',
         instances: [
           {
-            path: 'spec/fixtures/smallLines.js',
+            path: smallLinesPath,
             lines: [1,1],
             code: 'test = function() { return 1; };'
           },
           {
-            path: 'spec/fixtures/smallLines.js',
+            path: smallLinesPath,
             lines: [2,2],
             code: 'test = function() { return 2; };'
           },
           {
-            path: 'spec/fixtures/smallLines.js',
+            path: smallLinesPath,
             lines: [3,3],
             code: 'test = function() { return 3; };'
           }
