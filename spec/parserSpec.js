@@ -14,13 +14,6 @@ describe('parse', function() {
     expect(parses(src, 'users.controller.ts')).not.to.throwException();
   });
 
-  it('parses Flow-typed JS', function() {
-    const src = `// @flow
-      type Props = {| name: ?string, ...Other |};
-      function greet(props: Props): Promise<?string> { return null; }`;
-    expect(parses(src, 'greet.js')).not.to.throwException();
-  });
-
   it('parses generic arrow functions in .mts and .cts files', function() {
     const src = 'export const id = <T>(x: T): T => x;';
     expect(parses(src, 'id.mts')).not.to.throwException();

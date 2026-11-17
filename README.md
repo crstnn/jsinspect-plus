@@ -1,10 +1,9 @@
 # jsinspect-plus
 
-## Note this is a fork of jsinspect that now supports ES2020 standard (and most proposed features), TS and TSX files. It uses Babel 8's parser, upgrading from babylon to the new babel/parser. Files are parsed as TypeScript first; Flow-typed files and TS parameter decorators (Angular, NestJS) are handled as a fallback.
+## Note this is a fork of jsinspect that now supports ES2020 standard (and most proposed features), TS and TSX files. It uses Babel 8's parser, upgrading from babylon to the new babel/parser. Support for Flow has been removed in favour of TS. TS parameter decorators (Angular, NestJS) are supported.
 
 Detect copy-pasted and structurally similar JavaScript code. Requires Node.js
-^22.18.0 or >=24.11.0 (Babel 8's requirement), and supports ES2020, JSX, TS, TSX
-and most Flow.
+^22.18.0 or >=24.11.0 (Babel 8's requirement), and supports ES2020, JSX, TS and TSX.
 
 [![Build Status](https://travis-ci.org/danielstjules/jsinspect.svg?branch=master)](https://travis-ci.org/danielstjules/jsinspect)
 
