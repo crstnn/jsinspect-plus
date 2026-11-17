@@ -25,7 +25,7 @@
     "url": "git+https://github.com/crstnn/jsinspect-plus.git"
   },
   "dependencies": {
-    "@babel/parser": "^8.0.0-beta.0",
+    "@babel/parser": "^8.1.2",
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "filepaths": "^0.3.0",
@@ -44,6 +44,9 @@
   },
   "scripts": {
     "test": "mocha -R spec spec spec/reporters"
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.11.0"
   },
   "bugs": {
     "url": "https://github.com/crstnn/jsinspect-plus/issues"
