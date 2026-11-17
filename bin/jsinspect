@@ -69,6 +69,8 @@ process.env.DEBUG = program.debug || '';
 
 // By default, ignore deps and tests
 const ignorePatterns = ['node_modules', 'bower_components', 'test', 'spec'];
+// Yarn 2+ release and PnP files
+ignorePatterns.push('[\\\\/]\\.yarn[\\\\/]', '[\\\\/]\\.pnp(\\.loader)?\\.[cm]?js$');
 if (program.ignore) {
   ignorePatterns.push(program.ignore);
 }

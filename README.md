@@ -40,7 +40,7 @@ The tool accepts a list of paths to parse and prints any found matches. Any
 directories among the paths are walked recursively, and only `.js`, `.jsx`, `.mjs`, `.cjs`,
 `.ts`, `.tsx`, `.mts` and `.cts` files are analyzed. You can explicitly pass file paths that include a different
 extension as well. Any `node_modules` and `bower_components` dirs are also
-ignored.
+ignored, as are Yarn's `.yarn` dir and `.pnp.cjs`/`.pnp.loader.mjs` files.
 
 ![screenshot](https://cloud.githubusercontent.com/assets/817212/24126139/bd151a34-0da2-11e7-94a8-9742279c8566.png)
 
