@@ -1,9 +1,10 @@
 # jsinspect-plus
 
-## Note this is a fork of jsinspect that now supports ES2020 standard (and most proposed features), TS and TSX files. It uses Babel 8's parser, upgrading from babylon to the new babel/parser. Support for Flow has been removed in favour of TS.
+## Note this is a fork of jsinspect that now supports ES2020 standard (and most proposed features), TS and TSX files. It uses Babel 8's parser, upgrading from babylon to the new babel/parser. Files are parsed as TypeScript first; Flow-typed files and TS parameter decorators (Angular, NestJS) are handled as a fallback.
 
 Detect copy-pasted and structurally similar JavaScript code. Requires Node.js
-16.2+, and supports ES2020, JSX, TS and TSX.
+^22.18.0 or >=24.11.0 (Babel 8's requirement), and supports ES2020, JSX, TS, TSX
+and most Flow.
 
 [![Build Status](https://travis-ci.org/danielstjules/jsinspect.svg?branch=master)](https://travis-ci.org/danielstjules/jsinspect)
 
@@ -37,8 +38,8 @@ For context, identifiers include the names of variables, methods, properties,
 etc., while literals are strings, numbers, etc.
 
 The tool accepts a list of paths to parse and prints any found matches. Any
-directories among the paths are walked recursively, and only `.js`, `.jsx`, `.ts` and `.tsx`
-files are analyzed. You can explicitly pass file paths that include a different
+directories among the paths are walked recursively, and only `.js`, `.jsx`, `.mjs`, `.cjs`,
+`.ts`, `.tsx`, `.mts` and `.cts` files are analyzed. You can explicitly pass file paths that include a different
 extension as well. Any `node_modules` and `bower_components` dirs are also
 ignored.
 
